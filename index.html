@@ -14,24 +14,38 @@
     <title>AI Trip Generator</title>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <h1>Plan your next adventure with me, <br />your AI travel assistant</h1>
-      <form action="">
+      <form>
         <input
           type="text"
           placeholder="Which country you want to visit next?"
           autofocus
           required
+          id="countryInput"
+          class="instructions"
         />
-        <input type="submit" name="submit" id="submit" />
+        <input
+          type="submit"
+          name="submitCountry"
+          class="submitButton"
+          id="submitcountryButton"
+        />
         <br />
         <input
           type="text"
           placeholder="What is your favourite adventure activity? "
           autofocus
           required
+          id="activityInput"
+          class="instructions"
         />
-        <input type="submit" name="submit" id="submit" />
+        <input
+          type="submit"
+          name="submitActivity"
+          class="submitButton"
+          id="submitActivityButton"
+        />
       </form>
 
       <div id="placeholderText">
