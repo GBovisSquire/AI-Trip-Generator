@@ -11,12 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>AI Trip Generator</title>
   </head>
   <body>
     <div class="container">
       <h1>Plan your next adventure with me, <br />your AI travel assistant</h1>
-      <form>
+      <form id="tripGeneratorFormCountry">
         <input
           type="text"
           placeholder="Which country you want to visit next?"
@@ -31,6 +33,8 @@
           class="submitButton"
           id="submitcountryButton"
         />
+      </form>
+      <form id="tripGeneratorFormActivity">
         <br />
         <input
           type="text"
@@ -48,10 +52,7 @@
         />
       </form>
 
-      <div id="placeholderText">
-        Whatever you passion, hiking, biking or kayaking, we will find you the
-        trip of your dreams
-      </div>
+      <div id="placeholderText"></div>
     </div>
     <footer>
       <p>
