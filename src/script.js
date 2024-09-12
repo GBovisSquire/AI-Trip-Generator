@@ -1,5 +1,5 @@
 function displayTrip(response) {
-  new Typewriter("#placeholderText", {
+  new Typewriter("#tripText", {
     strings: response.data.answer,
     autoStart: true,
     cursor: "",
@@ -18,6 +18,10 @@ function generateTrip(event) {
     "You are an AI Assistant that explains the best time to visit a country. The answer should be no longer than 50 words. Make sure to follow the user instructions.";
   let prompt = `User instructions: When is the best time of year to go to ${countryInstructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let tripElement = document.querySelector("#tripText");
+  //tripElement.classList.remove("hidden");
+  tripElement.innerHTML = `Finding the best time to visit ${countryInstructionsInput.value}...`;
 
   console.log("generating trip");
   console.log(`Prompt: ${prompt}`);
